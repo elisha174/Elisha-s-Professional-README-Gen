@@ -1,7 +1,6 @@
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-//let license = data.license;
 
 function renderLicenseBadge(licenses) {
   let licenseBadge = '';
@@ -40,6 +39,7 @@ function renderLicenseBadge(licenses) {
 function renderLicenseLink(licenses) {
   let licenseLink = '';
 
+  //To ensure that the function is pulling the license
   console.log(`before the licenseLink switch::   ${licenses}`);
   
   switch (licenses) {
@@ -75,8 +75,6 @@ function renderLicenseLink(licenses) {
 function renderLicenseSection(licenses) {
 
   let licenseLinks = renderLicenseLink(licenses); 
-  
-  console.log(`Inside the License Section creator,:    ${licenseLinks}`);
 
   return `## License <br>\n ${licenseLinks} <br><br>`;
     
@@ -92,22 +90,18 @@ function generateMarkdown(title, description, installationInstruc,usageInfo,cont
   let licenseSec = renderLicenseSection(licenses)
  
 
-  console.log(licenses); 
-  console.log(`INside generate licenseBadge :>> ${licenseBadge}`);
-  console.log(`INside generate licenseSec :>> ${licenseSec}`);
- 
-
   return `# ${title} <br><br>
   ${licenseBadge} <br><br><br>
   ## Description <br>
   ${description} <br><br>
   ## Table of Contents <br>
-  [Installation](#Installation) <br>
-  [Usage](#Usage) <br>
-  [Contributing](#Contributing) <br>
-  [License](#License) <br>
-  [Tests](#Tests) <br>
-  [Questions](#Questions) <br><br>
+  [Installation](#h2-Installation)<br>
+  [Usage](#h2-Usage)<br>
+  [Contributing](#h2-Contributing)<br>
+  [License](#h2-License)<br>
+  [Tests](#h2-Tests)<br>
+  [Questions](#h2-Questions)<br>
+
   ## Installation <br>
   ${installationInstruc} <br><br>
   ## Usage <br>
@@ -123,4 +117,6 @@ function generateMarkdown(title, description, installationInstruc,usageInfo,cont
 `;
 }
 
+
+//Exporting this file's code to index.js
 export default generateMarkdown;
