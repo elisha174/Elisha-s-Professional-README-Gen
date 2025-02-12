@@ -23,3 +23,4 @@
   ## Questions <br>
   Github profile link: https://git.bootcampcontent.com/elishac174-ZHRVYU <br>
   For further inquiries, please reach out to me at elishac174@gmail.com.
+  Link to my Walkthrough of the generator: https://drive.google.com/file/d/1MUrINNTqQHoknSscEwNbPK0gbTyrE5Sv/view
